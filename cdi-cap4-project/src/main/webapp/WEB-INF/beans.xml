@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd"
+	version="1.1" bean-discovery-mode="all">
+
+	<!-- Para que um bean alternativo seja habilitado, ele precisa ser declarado no arquivo beans.xml e possuir a anotacao @Alternative. No Java EE 7, os beans alternativos 
+		sao automaticamente habilitados caso eles sejam anotados @Priority -->
+	<alternatives>
+		<class>cdi.alternatives.CaculadoraDeSalarioPadrao</class>
+	</alternatives>
+
+</beans>

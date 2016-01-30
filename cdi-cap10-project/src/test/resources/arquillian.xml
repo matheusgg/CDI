@@ -1,0 +1,18 @@
+<arquillian xmlns="http://jboss.org/schema/arquillian" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://jboss.org/schema/arquillian
+        http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+
+	<!-- Arquivo de configuracao que informa para o Arquillian o servidor container que sera utilizado para o testes. Neste caso, o tipo de adaptador managed esta sendo 
+		utilizado. Este arquivo deve ficar na raiz da pasta do diretorio ou dentro do diretorio src/test/resources. -->
+	<container qualifier="jbossas-managed" default="true">
+		<configuration>
+			<property name="jbossHome">/Development/Servers/wildfly-9.0.1.Final</property>
+
+			<!-- Informacoes de debug. Com esta configuracao, quando os testes forem iniciados (Run As > JUnit Test) o Arquillian esperara até que algum cliente se conecte 
+				na porta 8787 (Remote Java Application), quando isso acontecer, ele iniciara o servidor de aplicacao em modo debug para, deste modo, executar os testes em debug. -->
+			<property name="javaVmArguments">-Xmx512m -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=y</property>
+		</configuration>
+	</container>
+
+</arquillian>

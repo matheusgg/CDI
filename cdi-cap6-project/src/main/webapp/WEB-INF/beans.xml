@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd"
+	version="1.1" bean-discovery-mode="all">
+
+	<!-- Antes do CDI 1.1 e da anotacao @Priority, para habilitar um interceptor era necessario declara-lo no arquivo beans.xml -->
+	<!-- <interceptors> -->
+	<!-- <class>interceptors.CalculadoraInterceptor</class> -->
+	<!-- </interceptors> -->
+
+	<!-- Antes do CDI 1.1 e da anotacao @Priority, para habilitar um decorator era necessario declara-lo no arquivo beans.xml -->
+	<!-- <decorators> -->
+	<!-- <class>decorators.HttpServletRequestDecorator</class> -->
+	<!-- </decorators> -->
+
+</beans>
